@@ -16,4 +16,5 @@ public class AirBnbHomePage extends PageObject {
     public static Target BOTON_IDIOMA = Target.the("boton opciones de idioma").locatedBy("//nav//button[not(contains(@data-testid, \"cypress-headernav-profile\"))]");
     public static Target TEXTO_IDIOMA = Target.the("texto de referencia para notar cambio de idioma").locatedBy("//button[@data-testid=\"header-tab-search-block-tab-STAYS\"]//span");
     public static Target TEXTO_MONEDA = Target.the("texto de referencia para comprobar cambio de moneda").locatedBy("(//button/span[contains(@class, 'l120a03b')])[2]");
+    public static Target BOTON_CENTRO_AYUDA = Target.the("boton en el footer para navegar al centro de ayuda").locatedBy("(//footer//ul/li/a)[1]");
 }
