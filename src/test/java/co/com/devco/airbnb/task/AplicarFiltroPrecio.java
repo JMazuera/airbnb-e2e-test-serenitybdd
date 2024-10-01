@@ -4,6 +4,7 @@ import co.com.devco.airbnb.page.DetalleFiltrosOpcionesPage;
 import co.com.devco.airbnb.page.ResultadosEstadiaPage;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Clear;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
@@ -15,7 +16,9 @@ public class AplicarFiltroPrecio {
             actor.attemptsTo(
                     Click.on(ResultadosEstadiaPage.FILTROS_BOTON_OPCIONES),
                     Scroll.to(DetalleFiltrosOpcionesPage.SECCION_RANGO_PRECIOS),
+                    Clear.field(DetalleFiltrosOpcionesPage.PRECIO_MINIMO_INPUT),
                     Enter.theValue(precioMinimo).into(DetalleFiltrosOpcionesPage.PRECIO_MINIMO_INPUT),
+                    Clear.field(DetalleFiltrosOpcionesPage.PRECIO_MAXIMO_INPUT),
                     Enter.theValue(precioMaximo).into(DetalleFiltrosOpcionesPage.PRECIO_MAXIMO_INPUT)
             );
         });
